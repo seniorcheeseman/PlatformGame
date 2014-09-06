@@ -157,6 +157,7 @@
       <object>objects\obj_blockfrozen</object>
       <object>objects\obj_checkpoint</object>
       <object>objects\obj_teleporter</object>
+      <object>objects\obj_fallingblock</object>
     </objects>
     <objects name="System">
       <object>objects\obj_collision</object>
@@ -165,6 +166,7 @@
       <object>objects\obj_enemybounds</object>
       <object>objects\obj_spikebounds</object>
       <object>objects\obj_water</object>
+      <object>objects\obj_text</object>
     </objects>
     <objects name="Abilities">
       <object>objects\obj_iceability</object>
@@ -179,7 +181,7 @@
     <room>rooms\rm_gameplaydemo01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41888.1421011921</constant>
+    <constant name="GM_build_date">41888.2120102662</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>

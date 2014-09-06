@@ -96,7 +96,7 @@
     <instance objName="obj_collision" x="630" y="560" name="inst_8F901542" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="700" y="560" name="inst_50E5EF87" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="770" y="560" name="inst_D3679D49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boxcoin" x="35" y="665" name="inst_3E9CB53D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fallingblock" x="735" y="280" name="inst_707C30B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_boxcoin" x="1190" y="490" name="inst_582091BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_boxcoin" x="420" y="350" name="inst_AA03E19D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="1470" y="420" name="inst_0E498638" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -236,9 +236,11 @@
     <instance objName="obj_icepickup" x="3080" y="910" name="inst_FECA7361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="3080" y="1050" name="inst_D28F3DE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bouncer" x="1470" y="630" name="inst_5488F155" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_icepickup" x="105" y="840" name="inst_A53372C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_teleporter" x="280" y="735" name="inst_DCBD15B3" locked="0" code="" scaleX="1.52173912525177" scaleY="1.25" colour="4294967295" rotation="0"/>
-    <instance objName="obj_receiver" x="3745" y="735" name="inst_1AC7DEDB" locked="0" code="" scaleX="1.5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fallingblock" x="35" y="665" name="inst_2849371A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fallingblock" x="665" y="280" name="inst_6C185E41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fallingblock" x="945" y="700" name="inst_EF11C0DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fallingblock" x="1015" y="700" name="inst_5EE14062" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fallingblock" x="525" y="280" name="inst_A3AC5988" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tl_grass" x="0" y="910" w="70" h="70" xo="280" yo="210" id="10000313" name="inst_4606FD7E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

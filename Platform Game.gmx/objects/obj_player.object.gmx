@@ -921,6 +921,37 @@ if collision_spike &amp;&amp; obj_controller.gameover = false
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision with Teleporter
+
+if place_meeting(x,y,obj_teleporter)
+{   
+    if instance_exists(obj_receiver)
+    {
+     obj_player.x = obj_receiver.x + 50;
+     obj_player.y = obj_receiver.y - 50;
+    }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
         <whoName>obj_boxcoin</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -995,17 +1026,14 @@ if activated = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Collision with Teleporter
+            <string>/// Collision with Falling Block
+collision_fallingblock = instance_place(x,y+2,obj_fallingblock);
 
-if place_meeting(x,y,obj_teleporter)
-{   
-    if instance_exists(obj_receiver)
-    {
-     obj_player.x = obj_receiver.x + 30;
-     obj_player.y = obj_receiver.y - 50;
-    }
+if collision_fallingblock
+{
+    collision_fallingblock.gravity = 0.5;
+    y = collision_fallingblock.y-43;
 }
-
 </string>
           </argument>
         </arguments>

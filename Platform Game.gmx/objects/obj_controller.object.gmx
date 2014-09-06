@@ -175,11 +175,7 @@ draw_set_color(c_gray);
 draw_text(view_xport + 580, view_yport + 20, "SCORE: " + string(score));
 
 //Debugging Texts
-draw_text(view_xport + 20, view_yport + 20, "GP_axisLV: " + string(gamepad_axis_value(0,gp_axislv)));
-draw_text(view_xport + 20, view_yport + 40, "GP_axisLH: " + string(gamepad_axis_value(0,gp_axislh)));
-draw_text(view_xport + 20, view_yport + 60, "GP_ButtonA: " + string(gamepad_button_value(0,obj_player.gp_A)));
-draw_text(view_xport + 20, view_yport + 80, "GP_RightTrigger: " + string(gamepad_button_value(0,obj_player.gp_RT)));
-
+draw_text(view_xport + 20, view_yport + 20, "Onground: " + string(obj_player.onground));
 </string>
           </argument>
         </arguments>
