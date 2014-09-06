@@ -277,11 +277,11 @@ underwater = false;
 
 ///If the player is on a falling block
 
-if instance_place(x,y+1,obj_fallingblock)
-{
- while !instance_place(x,y,obj_fallingblock)
- y += 1;
-}
+//if instance_place(x,y+1,obj_fallingblock)
+//{
+// while !instance_place(x,y+1,obj_fallingblock)
+// y += 1;
+//}
 
 //If the player is on the ground
 if place_meeting(x,y+1,obj_collision) || place_meeting(x,y+1,obj_fallingblock)
@@ -488,6 +488,33 @@ if input_jump_released &amp;&amp; vsp &lt; 0
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Play Sounds According to the Player State
+
+if jumping = true
+{
+    if not audio_is_playing(snd_jump)
+    audio_play_sound(snd_jump,10,false);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Update the Player Sprite Accordingly
 
 //Change which way the player is facing depending on which way is moving
@@ -577,33 +604,6 @@ if abilitystate = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Play Sounds According to the Player State
-
-if jumping = true
-{
-    if not audio_is_playing(snd_jump)
-    audio_play_sound(snd_jump,10,false);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///Physics Calculations
 
 //If the game is over, ignore all of this
@@ -652,26 +652,24 @@ if (x + hsp) &lt; 20 || (x + hsp) &gt; (room_width - 20)
     hsp = 0;
 }
 
-//Horizontal Collision Calculations
-if place_meeting(x+hsp,y,obj_fallingblock)
-{
-    while(!place_meeting(x+sign(hsp),y,obj_fallingblock))
-    {
-        x += sign(hsp);  
-    }
-    hsp = 0;  
-}
+//if instance_place(x,y+hsp,obj_fallingblock)
+//{
+//    while(!place_meeting(x+sign(hsp),y,obj_fallingblock))
+//    {
+//        x += sign(hsp);  
+//    }
+//    hsp = 0;  
+//}
 
-//Vertical Collision Calculations
-v_col = instance_place(x,y+vsp,obj_fallingblock)
-if v_col
-{
-    while(!place_meeting(x,y+sign(vsp),v_col))
-    {
-        y += sign(vsp);  
-    }
-    vsp = v_col.vspeed;
-}
+//v_col = instance_place(x,y+vsp,obj_fallingblock)
+//if v_col
+//{
+//    while(!place_meeting(x,y+sign(vsp),v_col))
+//    {
+//        y += sign(vsp);  
+//    }
+//    vsp = v_col.vspeed;
+//}
 
 //Horizontal Collision Calculations
 if place_meeting(x+hsp,y,obj_collision)
@@ -1081,34 +1079,6 @@ if activated = true
 }
 
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Collision with Falling Block
-
-collision_fallingblock = instance_place(x,y+1,obj_fallingblock)
-
-if collision_fallingblock &amp;&amp; obj_controller.gameover = false
-{
- collision_fallingblock.gravity = 0.3;
-}
 </string>
           </argument>
         </arguments>
