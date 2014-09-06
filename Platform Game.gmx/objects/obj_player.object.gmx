@@ -196,6 +196,51 @@ canmove = true;
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>Check if the player is outside room</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check if the player is outside the room
+
+if y &gt; room_height
+if obj_controller.gameover = false
+obj_controller.gameover = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>State Recognition, Input, Sprite, Sound, and Physics Control</string>
           </argument>
         </arguments>
@@ -230,8 +275,16 @@ underwater = false;
 
 //Check player's location states
 
+///If the player is on a falling block
+
+if instance_place(x,y+1,obj_fallingblock)
+{
+ while !instance_place(x,y,obj_fallingblock)
+ y += 1;
+}
+
 //If the player is on the ground
-if place_meeting(x,y+1,obj_collision)
+if place_meeting(x,y+1,obj_collision) || place_meeting(x,y+1,obj_fallingblock)
 onground = true;
     
 //If the player is in the water
@@ -559,66 +612,88 @@ exit;
 
 if canmove = 0 &amp;&amp; !audio_is_playing(snd_transition)
 gamepad_set_vibration(0,0,0);
-
-    //If the player is not in water
-    if !atwatersurface &amp;&amp; !underwater
-    {
-        //Set the animation speed
-        image_speed = 0.2*move/1;
-        
-        //Set the hsp and vsp on land and in the air
-        hsp = move * movespeed;
-        vsp += grav;
-        
-        //If the player is on the ground, we should allow the player to jump
-        if canmove = true &amp;&amp; onground
-        vsp += input_jump *-jumpspeed;
+ 
+//If the player is not in water
+if !atwatersurface &amp;&amp; !underwater
+{
+    //Set the animation speed
+    image_speed = 0.2*move/1;
     
-    }
+    //Set the hsp and vsp on land and in the air
+    hsp = move * movespeed;
+    vsp += grav;
     
-    else //If the player is in the water
-    {
-        //Set the animation speed
-        image_speed = 0.1*move/1;
-        
-        //Set the hsp and vsp in water
-        hsp = move * watermovespeed;
-        vsp += (input_jump * -watermovespeed + watergrav);
-        
-        //Limit the player's move speed in water
-        vsp = clamp(vsp,-watermovespeed,watermovespeed);
-        
-        //If the player is at the water surface, we should allow the player to jump
-        if canmove = true &amp;&amp; atwatersurface
-        vsp += input_jump * -waterjumpspeed;
-    }
+    //If the player is on the ground, we should allow the player to jump
+    if canmove = true &amp;&amp; onground
+    vsp = input_jump *-jumpspeed;
 
- //Prevent the Player from exiting the room
- if (x + hsp) &lt; 20 || (x + hsp) &gt; (room_width - 20)
- {
-     hsp = 0;
- }
- 
- //Horizontal Collision Calculations
- if (place_meeting(x+hsp,y,obj_collision))
- {
-     while(!place_meeting(x+sign(hsp),y,obj_collision))
-     {
-         x += sign(hsp);  
-     }
-     hsp = 0;  
- }
- 
- //Vertical Collision Calculations
- if (place_meeting(x,y+vsp,obj_collision))
- {
-     while(!place_meeting(x,y+sign(vsp),obj_collision))
-     {
-         y += sign(vsp);
-     }
-     vsp = 0;
- }
- 
+}
+
+else //If the player is in the water
+{
+    //Set the animation speed
+    image_speed = 0.1*move/1;
+    
+    //Set the hsp and vsp in water
+    hsp = move * watermovespeed;
+    vsp += (input_jump * -watermovespeed + watergrav);
+    
+    //Limit the player's move speed in water
+    vsp = clamp(vsp,-watermovespeed,watermovespeed);
+    
+    //If the player is at the water surface, we should allow the player to jump
+    if canmove = true &amp;&amp; atwatersurface
+    vsp = input_jump * -waterjumpspeed;
+}
+
+//Prevent the Player from exiting the room
+if (x + hsp) &lt; 20 || (x + hsp) &gt; (room_width - 20)
+{
+    hsp = 0;
+}
+
+//Horizontal Collision Calculations
+if place_meeting(x+hsp,y,obj_fallingblock)
+{
+    while(!place_meeting(x+sign(hsp),y,obj_fallingblock))
+    {
+        x += sign(hsp);  
+    }
+    hsp = 0;  
+}
+
+//Vertical Collision Calculations
+v_col = instance_place(x,y+vsp,obj_fallingblock)
+if v_col
+{
+    while(!place_meeting(x,y+sign(vsp),v_col))
+    {
+        y += sign(vsp);  
+    }
+    vsp = v_col.vspeed;
+}
+
+//Horizontal Collision Calculations
+if place_meeting(x+hsp,y,obj_collision)
+{
+    while(!place_meeting(x+sign(hsp),y,obj_collision))
+    {
+        x += sign(hsp);  
+    }
+    hsp = 0;  
+}
+
+//Vertical Collision Calculations
+if place_meeting(x,y+vsp,obj_collision)
+{
+    while(!place_meeting(x,y+sign(vsp),obj_collision))
+    {
+        y += sign(vsp);  
+    }
+    vsp = 0;
+}
+
+
 //Move the player according to these calculations
  x += hsp;
  y += vsp;
@@ -1026,59 +1101,14 @@ if activated = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Collision with Falling Block
-collision_fallingblock = instance_place(x,y+2,obj_fallingblock);
+            <string>///Collision with Falling Block
 
-if collision_fallingblock
+collision_fallingblock = instance_place(x,y+1,obj_fallingblock)
+
+if collision_fallingblock &amp;&amp; obj_controller.gameover = false
 {
-    collision_fallingblock.gravity = 0.5;
-    y = collision_fallingblock.y-43;
+ collision_fallingblock.gravity = 0.3;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>605</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>Check if the player is outside room</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Check if the player is outside the room
-
-if y &gt; room_height || y &lt; 0
-if obj_controller.gameover = false
-obj_controller.gameover = true;
 </string>
           </argument>
         </arguments>

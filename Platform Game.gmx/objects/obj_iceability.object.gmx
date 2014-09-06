@@ -78,10 +78,13 @@ audio_play_sound(snd_hitwall,10,false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///Controlling the Ice Ability
+
+if obj_controller.gameover = false
+{
 image_angle += turnspeed;
 
-if gravity = 0 &amp;&amp; obj_controller.gameover = false
+if gravity = 0
 {
     input_right = keyboard_check(ord('D')) or keyboard_check(vk_right);
     input_left = keyboard_check(ord('A')) or keyboard_check(vk_left);
@@ -109,7 +112,7 @@ x += hsp;
 y += vsp;
 
 dir += 5;
-
+}
 </string>
           </argument>
         </arguments>
