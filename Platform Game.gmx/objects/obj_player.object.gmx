@@ -275,16 +275,10 @@ underwater = false;
 
 //Check player's location states
 
-///If the player is on a falling block
-
-//if instance_place(x,y+1,obj_fallingblock)
-//{
-// while !instance_place(x,y+1,obj_fallingblock)
-// y += 1;
-//}
+//If the player is on a falling block
 
 //If the player is on the ground
-if place_meeting(x,y+1,obj_collision) || place_meeting(x,y+1,obj_fallingblock)
+if place_meeting(x,y+1,obj_collision)
 onground = true;
     
 //If the player is in the water
@@ -625,7 +619,7 @@ if !atwatersurface &amp;&amp; !underwater
     
     //If the player is on the ground, we should allow the player to jump
     if canmove = true &amp;&amp; onground
-    vsp = input_jump *-jumpspeed;
+    vsp += input_jump *-jumpspeed;
 
 }
 
@@ -643,7 +637,7 @@ else //If the player is in the water
     
     //If the player is at the water surface, we should allow the player to jump
     if canmove = true &amp;&amp; atwatersurface
-    vsp = input_jump * -waterjumpspeed;
+    vsp += input_jump * -waterjumpspeed;
 }
 
 //Prevent the Player from exiting the room
@@ -1077,6 +1071,42 @@ if activated = true
     activatetime -= 1;
     
 }
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision with fallingblock
+
+collision_fallingblock = instance_place(x,y+1,obj_fallingblock)
+
+if collision_fallingblock &amp;&amp; obj_controller.gameover = false
+{
+ if collision_fallingblock.touched = false
+ {
+  collision_fallingblock.alarm[0] = collision_fallingblock.falldelay;
+  collision_fallingblock.touched = true;
+ }
+}
+
+
 
 
 </string>
