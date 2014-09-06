@@ -57,7 +57,7 @@ vsp = 0;
             <string>
 image_angle += turnspeed;
 
-if gravity = 0
+if gravity = 0 &amp;&amp; obj_controller.gameover = false
 {
     input_right = keyboard_check(ord('D')) or keyboard_check(vk_right);
     input_left = keyboard_check(ord('A')) or keyboard_check(vk_left);
@@ -68,8 +68,10 @@ if gravity = 0
     vsp = movespeed*(-input_up+input_down); 
     
     if gamepad_is_connected(0)
-    hsp = movespeed*gamepad_axis_value(0,gp_axislh);
-    vsp = movespeed*gamepad_axis_value(0,gp_axislv);
+    {
+        hsp = movespeed*gamepad_axis_value(0,gp_axislh);
+        vsp = movespeed*gamepad_axis_value(0,gp_axislv);
+    }
     
     gamepad_set_vibration(0,0.3,0.3);
 }
@@ -110,7 +112,7 @@ collision_ghost = instance_place(x,y,obj_ghost);
  
 if collision_ghost &amp;&amp; collision_ghost.dead = false &amp;&amp; obj_controller.gameover = false 
 {
-    if collision_ghost.dead = false &amp;&amp; gravity != 0
+    if collision_ghost.dead = false 
     {
         if obj_controller.gameover = false &amp;&amp; collision_ghost.dead = false
         {
@@ -146,7 +148,7 @@ collision_pinkfish = instance_place(x,y,obj_pinkfish);
  
 if collision_pinkfish &amp;&amp; collision_pinkfish.dead = false &amp;&amp; obj_controller.gameover = false
 {
-    if collision_pinkfish.dead = false &amp;&amp; gravity != 0
+    if collision_pinkfish.dead = false
     {
         if obj_controller.gameover = false &amp;&amp; collision_pinkfish.dead = false
         {
@@ -180,7 +182,7 @@ if collision_pinkfish &amp;&amp; collision_pinkfish.dead = false &amp;&amp; obj_
 
 collision_blockflashing = instance_place(x,y,obj_blockflashing);
  
-if collision_blockflashing &amp;&amp; obj_controller.gameover = false &amp;&amp; gravity != 0
+if collision_blockflashing &amp;&amp; obj_controller.gameover = false 
 {
     instance_create(collision_blockflashing.x, collision_blockflashing.y, obj_blockfrozen);
     with(collision_blockflashing) instance_destroy();
@@ -210,10 +212,46 @@ if collision_blockflashing &amp;&amp; obj_controller.gameover = false &amp;&amp;
 
 collision_blockfrozen = instance_place(x,y,obj_blockfrozen);
  
-if collision_blockfrozen &amp;&amp; obj_controller.gameover = false &amp;&amp; gravity != 0
+if collision_blockfrozen &amp;&amp; obj_controller.gameover = false 
 {
     collision_blockfrozen.freezetime = 120;
     instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision with bouncers
+
+collision_bouncer = instance_place(x,y,obj_bouncer);
+ 
+if collision_bouncer &amp;&amp; collision_bouncer.dead = false &amp;&amp; obj_controller.gameover = false 
+{
+    if collision_bouncer.dead = false 
+    {
+        if obj_controller.gameover = false &amp;&amp; collision_bouncer.dead = false
+        {
+            obj_controller.score += collision_bouncer.worth;
+            collision_bouncer.dead = true;     
+            instance_destroy();
+        }
+    }
 }
 </string>
           </argument>

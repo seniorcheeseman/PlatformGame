@@ -323,16 +323,19 @@ if abilitystate = 1 //If the player is in ice mode
         
         if !audio_is_playing(snd_iceability)
         audio_play_sound(snd_iceability, 10, false);
+        
+        canmove = false;
     }
     
     if input_ability
     {
-        canmove = 0;
+        //canmove = false;
     }
     
     if input_ability_released
     {
         obj_iceability.gravity = 1;
+        canmove = true;
     }
 }
 
@@ -773,7 +776,7 @@ if collision_ghost &amp;&amp; obj_controller.gameover = false &amp;&amp; collisi
     {
             collision_ghost.dead = true;
             
-            vsp = -2*bouncespeed;
+            vsp = -bouncespeed;
             audio_play_sound(snd_bounce,10,false);
             
             bouncing = true;
@@ -851,6 +854,50 @@ if collision_pinkfish &amp;&amp; obj_controller.gameover = false &amp;&amp; coll
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Collision with bouncer
+
+collision_bouncer = instance_place(x,y,obj_bouncer);
+ 
+if collision_bouncer &amp;&amp; obj_controller.gameover = false &amp;&amp; collision_bouncer.dead = false
+{
+    if y &lt; collision_bouncer.yposition
+    {
+            collision_bouncer.dead = true;
+            
+            vsp = - 1.9 * bouncespeed;
+            audio_play_sound(snd_bounce,10,false);
+            
+            bouncing = true;
+            obj_controller.score += collision_bouncer.worth;
+            
+            gamepad_set_vibration(0,1,1);
+            alarm[2] = 6;
+    }
+    else
+    {
+        obj_controller.gameover = true;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Collision with spikes
 
 collision_spike = instance_place(x,y,obj_spike) 
@@ -882,7 +929,7 @@ if collision_spike &amp;&amp; obj_controller.gameover = false
             <kind>1</kind>
             <string>///Collision with boxcoins
 
-if place_meeting(x,y+1,obj_player)
+if place_meeting(x,y+3,obj_player)
 {   
     obj_player.vsp = 0;
     
@@ -927,6 +974,37 @@ if activated = true
     
 }
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision with Teleporter
+
+if place_meeting(x,y,obj_teleporter)
+{   
+    if instance_exists(obj_receiver)
+    {
+     obj_player.x = obj_receiver.x + 30;
+     obj_player.y = obj_receiver.y - 50;
+    }
+}
 
 </string>
           </argument>

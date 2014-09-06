@@ -101,6 +101,8 @@
       <sprite>sprites\spr_blockfrozen</sprite>
     </sprites>
     <sprites name="Items Interactive">
+      <sprite>sprites\spr_receiver</sprite>
+      <sprite>sprites\spr_teleporter</sprite>
       <sprite>sprites\spr_switch</sprite>
       <sprite>sprites\spr_spring</sprite>
       <sprite>sprites\spr_redflaglimp</sprite>
@@ -112,6 +114,7 @@
       <sprite>sprites\spr_hspikedispenser</sprite>
       <sprite>sprites\spr_vspikedispenser</sprite>
     </sprites>
+    <sprite>sprites\sprite69</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sky</background>
@@ -144,6 +147,7 @@
     </objects>
     <objects name="Items Interactive">
       <object>objects\obj_goldcoin</object>
+      <object>objects\obj_receiver</object>
       <object>objects\obj_boxcoin</object>
       <object>objects\obj_spike</object>
       <object>objects\obj_hspikedispenser</object>
@@ -151,6 +155,7 @@
       <object>objects\obj_blockflashing</object>
       <object>objects\obj_blockfrozen</object>
       <object>objects\obj_checkpoint</object>
+      <object>objects\obj_teleporter</object>
     </objects>
     <objects name="System">
       <object>objects\obj_collision</object>
@@ -173,7 +178,7 @@
     <room>rooms\rm_gameplaydemo01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41888.0300227546</constant>
+    <constant name="GM_build_date">41888.1272017361</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
