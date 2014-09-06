@@ -54,7 +54,8 @@ vsp = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///Control the ice ability
+
 image_angle += turnspeed;
 
 if gravity = 0 &amp;&amp; obj_controller.gameover = false
@@ -79,6 +80,8 @@ else
 {
  obj_player.canmove = true;
  gamepad_set_vibration(0,0,0);
+ hsp = 0;
+ vsp = 0;
 }
 
 x += hsp;
