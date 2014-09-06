@@ -3,7 +3,7 @@
   <spriteName>spr_text</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -100,7 +100,7 @@ if (showtext == 1)
     draw_set_halign(fa_middle);
     draw_set_valign(fa_middle);
     draw_set_font(fnt_HUD);
-    draw_text(x, y-64, "this is a test message #test");
+    draw_text(x, y-120, "Welcome to the #Platform Game!");
     draw_set_alpha(1);
 }
 </string>
