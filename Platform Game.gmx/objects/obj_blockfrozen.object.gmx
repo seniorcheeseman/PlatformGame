@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>freezetime = 120;
+            <string>image_speed = 0.15;
+freezetime = 120;
 
 </string>
           </argument>
