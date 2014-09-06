@@ -109,6 +109,7 @@
       <sprite>sprites\spr_redflaglimp</sprite>
       <sprite>sprites\spr_redflagwaving</sprite>
       <sprite>sprites\spr_goldcoin</sprite>
+      <sprite>sprites\spr_text</sprite>
     </sprites>
     <sprites name="Spikes">
       <sprite>sprites\spr_spikeblockhl</sprite>
@@ -132,6 +133,7 @@
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\fnt_HUD</font>
+    <font>fonts\font_text</font>
   </fonts>
   <objects name="objects">
     <objects name="Player">
@@ -163,6 +165,7 @@
       <object>objects\obj_checkpoint</object>
       <object>objects\obj_teleporter</object>
       <object>objects\obj_fallingblock</object>
+      <object>objects\obj_text</object>
     </objects>
     <objects name="System">
       <object>objects\obj_collision</object>
@@ -171,7 +174,6 @@
       <object>objects\obj_enemybounds</object>
       <object>objects\obj_spikebounds</object>
       <object>objects\obj_water</object>
-      <object>objects\obj_text</object>
     </objects>
     <objects name="Abilities">
       <object>objects\obj_iceability</object>
@@ -186,7 +188,7 @@
     <room>rooms\rm_gameplaydemo01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41888.7905695833</constant>
+    <constant name="GM_build_date">41888.8372795023</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
