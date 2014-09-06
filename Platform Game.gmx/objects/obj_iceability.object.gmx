@@ -37,6 +37,30 @@ vsp = 0;
         </arguments>
       </action>
     </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Audio when being destroyed
+audio_play_sound(snd_hitwall,10,false);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -54,8 +78,7 @@ vsp = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Control the ice ability
-
+            <string>
 image_angle += turnspeed;
 
 if gravity = 0 &amp;&amp; obj_controller.gameover = false
@@ -80,8 +103,6 @@ else
 {
  obj_player.canmove = true;
  gamepad_set_vibration(0,0,0);
- hsp = 0;
- vsp = 0;
 }
 
 x += hsp;
@@ -256,6 +277,30 @@ if collision_bouncer &amp;&amp; collision_bouncer.dead = false &amp;&amp; obj_co
         }
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Collision with obj_collision
+
+if place_meeting(x, y, obj_collision)
+    instance_destroy();
 </string>
           </argument>
         </arguments>

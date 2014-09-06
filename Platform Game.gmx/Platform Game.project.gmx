@@ -5,6 +5,7 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
+    <sound>sound\snd_hitwall</sound>
     <sound>sound\snd_jump</sound>
     <sound>sound\snd_bounce</sound>
     <sound>sound\snd_gameover</sound>
@@ -178,7 +179,7 @@
     <room>rooms\rm_gameplaydemo01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41888.1300446991</constant>
+    <constant name="GM_build_date">41888.1421011921</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
