@@ -165,6 +165,7 @@
       <object>objects\obj_checkpoint</object>
       <object>objects\obj_teleporter</object>
       <object>objects\obj_fallingblock</object>
+      <object>objects\obj_text</object>
     </objects>
     <objects name="System">
       <object>objects\obj_collision</object>
@@ -180,9 +181,6 @@
       <object>objects\obj_icepickup</object>
       <object>objects\obj_shieldpickup</object>
     </objects>
-    <objects name="Texts">
-      <object>objects\obj_text</object>
-    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
@@ -190,7 +188,7 @@
     <room>rooms\rm_gameplaydemo01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41888.875637581</constant>
+    <constant name="GM_build_date">41888.8372795023</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
