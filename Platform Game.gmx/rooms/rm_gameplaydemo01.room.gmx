@@ -73,6 +73,10 @@
     <instance objName="obj_collision" x="1260" y="1960" name="inst_C455365D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="1330" y="1960" name="inst_DE3E589E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="1400" y="1960" name="inst_78E6F7D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spikeblockhl" x="700" y="1750" name="inst_7A08B93C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spikeblockhr" x="1050" y="1750" name="inst_32EB80D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spikeblockvu" x="420" y="1610" name="inst_BA6084E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spikeblockvd" x="280" y="1540" name="inst_DBC5CA14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tl_castle" x="0" y="1960" w="70" h="70" xo="280" yo="210" id="10000712" name="inst_6D177DCC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
