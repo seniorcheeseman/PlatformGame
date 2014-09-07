@@ -62,7 +62,7 @@ if sprite_index != spr_spike
     image_yscale = -sign(vspeed);
     
     depth = -2;
-    if place_meeting(x+hspeed,y+vspeed,obj_spikebounds) || place_meeting(x+hspeed,y+vspeed,obj_collision)
+    if place_meeting(x+hspeed,y+vspeed,obj_spikebounds)
     instance_destroy();
 }
 </string>

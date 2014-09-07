@@ -199,10 +199,10 @@
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
     <room>rooms\rm_level01</room>
-    <room>rooms\rm_gameplaydemo01</room>
+    <room>rooms\rm_level02</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41889.1417637153</constant>
+    <constant name="GM_build_date">41889.1960896528</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>

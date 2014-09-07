@@ -241,10 +241,9 @@
     <instance objName="obj_fallingblock" x="1470" y="385" name="inst_9C95F8BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fallingblock" x="2625" y="420" name="inst_7A204B49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_text" x="350" y="875" name="inst_F0696A60" locked="0" code="text = &quot;this is the text bro #man /#&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_next_level" x="3850" y="805" name="inst_C2D250DA" locked="0" code="//target_x = 2000;&#xA;//target_y = 350;&#xA;target_r = rm_gameplaydemo01;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_next_level" x="0" y="840" name="inst_C2D250DA" locked="0" code="//target_x = 2000;&#xA;//target_y = 350;&#xA;target_r = rm_level02;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_text" x="315" y="525" name="inst_4966A2DD" locked="0" code="text = &quot;bro&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spikeblockhl" x="455" y="490" name="inst_2E4106F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_next_level" x="35" y="770" name="inst_0BC968B1" locked="0" code="target_r = rm_gameplaydemo01&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tl_grass" x="0" y="910" w="70" h="70" xo="280" yo="210" id="10000313" name="inst_4606FD7E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

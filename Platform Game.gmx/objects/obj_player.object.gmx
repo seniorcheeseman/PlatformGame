@@ -57,7 +57,7 @@ atwatersurface = false;
 grav = 1;
 hsp = 0;
 vsp = 0;
-jumpspeed = 25;
+jumpspeed = 27;
 movespeed = 8;
 bouncespeed = 15;
 
@@ -441,10 +441,7 @@ if input_jump
     }
 }
 
-if input_jump_released &amp;&amp; vsp &lt; 0
-{
- vsp *= 0.5;
-}
+
 </string>
           </argument>
         </arguments>
@@ -914,7 +911,7 @@ if collision_bouncer &amp;&amp; obj_controller.gameover = false &amp;&amp; colli
     {
             collision_bouncer.dead = true;
             
-            vsp = - 1.9 * bouncespeed;
+            vsp = -2.5*bouncespeed;
             audio_play_sound(snd_bounce,10,false);
             
             bouncing = true;

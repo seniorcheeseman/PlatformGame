@@ -34,7 +34,7 @@ ghostgravity = 1;
 dir = 0;
 
 image_speed = 0.1;
-hsp = -2*image_xscale;
+hsp = -3*image_xscale;
 vsp = 0;
 
 </string>
