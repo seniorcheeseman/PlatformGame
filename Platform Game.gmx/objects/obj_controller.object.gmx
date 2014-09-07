@@ -28,7 +28,10 @@
             <string>
 //Set some global variables
 gameover = false;
+
 score = 0;
+
+
 
 
 checkpoint_x = x;
@@ -221,7 +224,7 @@ draw_set_halign(fa_left);
 
 draw_set_font(fnt_HUD);
 draw_set_color(c_gray);
-draw_text(view_xport + 580, view_yport + 20, "SCORE: " + string(score));
+draw_text(view_xport + 1200, view_yport + 20, "SCORE: " + string(score));
 
 //Debugging Texts
 draw_text(view_xport + 20, view_yport + 20, "Onground: " + string(obj_player.onground));

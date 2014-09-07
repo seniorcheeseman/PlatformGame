@@ -48,7 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_meeting(x,y,obj_player)
+            <string>
+
+if place_meeting(x,y,obj_player)
 {
     if global.checkpoint != id
     {
@@ -58,6 +60,7 @@
     global.checkpointx = x;
     global.checkpointy = y;
     global.checkpointR = room;
+    global.tempscore = score;
 }
 
 if global.checkpointR = room
