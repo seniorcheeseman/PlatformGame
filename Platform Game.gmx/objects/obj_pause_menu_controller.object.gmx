@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1000000</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,35 +25,41 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-//Set some global variables
-gameover = false;
-score = 0;
+            <string>screen_save("tempscreenshot.png");
 
+instance_deactivate_all(true);
 
-checkpoint_x = x;
-checkpoint_y = y;
-background_music_delay = 5;
-gameoverdelay = 300;
+background = sprite_add("tempscreenshot.png", 0, false, true, 400, 300);
 
-//Controller Variables
+interest = "resume";
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (file_exists("tempscreenshot.png"))
+{
+    file_delete("tempscreenshot.png");
+}
 
-gamepad_set_axis_deadzone(0,0.1);
-global.gp_Start = gp_start;
-global.gp_Select = gp_select;
-
-global.gp_A = gp_face1;
-global.gp_B = gp_face2;
-global.gp_X = gp_face3;
-global.gp_Y = gp_face4;
-global.gp_RB = gp_shoulderr;
-global.gp_LB = gp_shoulderl;
-global.gp_RT = gp_shoulderrb;
-global.gp_LT = gp_shoulderlb;
-global.gp_DR = gp_padr;
-global.gp_DL = gp_padl;
-global.gp_DU = gp_padu;
-global.gp_DD = gp_padd;
+instance_activate_all();
 </string>
           </argument>
         </arguments>
@@ -76,22 +82,69 @@ global.gp_DD = gp_padd;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Delay, then play Background Music
+            <string>
+input_up = keyboard_check_pressed(ord('W')) || keyboard_check_pressed(vk_up);
+input_down = keyboard_check_pressed(ord('S')) || keyboard_check_pressed(vk_down);
+input_enter = keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0,global.gp_A) || keyboard_check_pressed(vk_space);
+input_escape = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,global.gp_B);
 
-if background_music_delay != 0
-background_music_delay -= 1;
-else
+input_move = input_up - input_down;
+
+
+if gamepad_is_connected(0)
 {
-    audio_play_sound(snd_overworld,10,true);
-    background_music_delay = -1;
+    input_move = gamepad_axis_value(0,gp_axislv);
 }
 
+if input_move &gt; 0
+{
+ if interest = "resume"
+    {
+        interest = "exit";
+    } 
+    else if interest = "exit"
+    {
+        interest = "options";
+    }
+    else if interest = "options"
+    {
+        interest = "resume";
+    }
+}
 
+if input_move &lt; 0
+{
+    if interest = "resume"
+    {
+        interest = "options";
+    }
+    else if interest = "options"
+    {
+        interest = "exit";
+    }
+    else if interest = "exit"
+    {
+        interest = "resume";
+    }
+}
 
+if input_enter
+{
+    if interest = "resume" 
+    {
+        instance_destroy();
+    }
+    else if interest = "exit"
+    {  
+        game_end();
+    }
+}
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="7" enumb="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -108,83 +161,12 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Check if Game is Over
-
-if gameover = false
+            <string>if (file_exists("tempscreenshot.png"))
 {
-    x = obj_player.x;
-    y = obj_player.y;
-}
-else
-{  
-    gamepad_set_vibration(0,gameoverdelay/200,gameoverdelay/200);
-    
-    view_object = obj_controller;
-    
-    if obj_player.abilitystate = 0
-    obj_player.sprite_index = spr_playerhurt;
-    
-    else if obj_player.abilitystate = 1
-    obj_player.sprite_index = spr_iceplayerhurt;
-    
-    else if obj_player.abilitystate = 2
-    obj_player.sprite_index = spr_shieldplayerhurt;
-    
-    audio_stop_sound(snd_overworld);
-    
-    if gameoverdelay = 300
-    {
-        audio_play_sound(snd_death,10,false);
-    }
-    if gameoverdelay = 300
-    {
-        audio_play_sound(snd_gameover,10,false);
-    }
-    
-    if gameoverdelay &lt; 240 &amp;&amp; gameoverdelay != 0 &amp;&amp; instance_number(obj_player) &gt; 0
-    {
-        obj_player.image_speed = 0.2;
-        
-        if obj_player.hspeed = 0
-        obj_player.vspeed = -15;
-        else
-        obj_player.vspeed += obj_player.grav*1.5;
-        obj_player.hspeed = obj_player.image_xscale*3;
-    }
-
-    if gameoverdelay &gt; 0
-    {
-        gameoverdelay --;
-    }
-    else
-    {
-        room_restart();
-    }
+    file_delete("tempscreenshot.png");
 }
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if keyboard_check_pressed(vk_escape)
-instance_create(x, y, obj_pause_menu_controller);
-
+instance_activate_all();
 </string>
           </argument>
         </arguments>
@@ -207,16 +189,27 @@ instance_create(x, y, obj_pause_menu_controller);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>draw_sprite(background, 0, 400, 300);
+draw_sprite(spr_pause_backdrop, 0, 400, 300);
 
-draw_set_halign(fa_left);
-
-draw_set_font(fnt_HUD);
-draw_set_color(c_gray);
-draw_text(view_xport + 580, view_yport + 20, "SCORE: " + string(score));
-
-//Debugging Texts
-draw_text(view_xport + 20, view_yport + 20, "Onground: " + string(obj_player.onground));
+if (interest == "resume") 
+{
+    draw_sprite(spr_pause_resume, 1, 400, 300 - 100);
+    draw_sprite(spr_pause_option, 0, 400, 300);
+    draw_sprite(spr_pause_exit, 0, 400, 300 + 100);
+}
+if (interest == "options") 
+{
+    draw_sprite(spr_pause_resume, 0, 400, 300 - 100);
+    draw_sprite(spr_pause_option, 1, 400, 300);
+    draw_sprite(spr_pause_exit, 0, 400, 300 + 100);
+}
+if (interest == "exit") 
+{
+    draw_sprite(spr_pause_resume, 0, 400, 300 - 100);
+    draw_sprite(spr_pause_option, 0, 400, 300);
+    draw_sprite(spr_pause_exit, 1, 400, 300 + 100);
+}
 </string>
           </argument>
         </arguments>
@@ -234,8 +227,5 @@ draw_text(view_xport + 20, view_yport + 20, "Onground: " + string(obj_player.ong
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>0,0</point>
-    <point>35,35</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>

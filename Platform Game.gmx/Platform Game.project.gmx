@@ -122,6 +122,12 @@
       <sprite>sprites\spr_spike</sprite>
       <sprite>sprites\spr_hspikemoving</sprite>
     </sprites>
+    <sprites name="Menu">
+      <sprite>sprites\spr_pause_resume</sprite>
+      <sprite>sprites\spr_pause_option</sprite>
+      <sprite>sprites\spr_pause_exit</sprite>
+      <sprite>sprites\spr_pause_backdrop</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sky</background>
@@ -139,6 +145,7 @@
     <objects name="Player">
       <object>objects\obj_player</object>
       <object>objects\obj_controller</object>
+      <object>objects\obj_pause_menu_controller</object>
     </objects>
     <objects name="Enemies">
       <object>objects\obj_bouncer</object>
@@ -188,7 +195,7 @@
     <room>rooms\rm_gameplaydemo01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41888.8372795023</constant>
+    <constant name="GM_build_date">41889.0436428472</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>

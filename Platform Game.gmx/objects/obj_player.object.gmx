@@ -72,24 +72,7 @@ if global.checkpointR = room
     y = global.checkpointy;
 }
 
-//Controller Variables
 
-gamepad_set_axis_deadzone(0,0.1);
-gp_Start = gp_start;
-gp_Select = gp_select;
-
-gp_A = gp_face1;
-gp_B = gp_face2;
-gp_X = gp_face3;
-gp_Y = gp_face4;
-gp_RB = gp_shoulderr;
-gp_LB = gp_shoulderl;
-gp_RT = gp_shoulderrb;
-gp_LT = gp_shoulderlb;
-gp_DR = gp_padr;
-gp_DL = gp_padl;
-gp_DU = gp_padu;
-gp_DD = gp_padd;
 
 
 
@@ -355,9 +338,9 @@ falling = true;
             <kind>1</kind>
             <string>///Check the Player's Ability State
 
-input_ability_pressed = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,gp_RT);
-input_ability = keyboard_check(vk_space) || gamepad_button_check(0,gp_RT);
-input_ability_released = keyboard_check_released(vk_space) || gamepad_button_check_released(0,gp_RT);
+input_ability_pressed = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,global.gp_RT);
+input_ability = keyboard_check(vk_space) || gamepad_button_check(0,global.gp_RT);
+input_ability_released = keyboard_check_released(vk_space) || gamepad_button_check_released(0,global.gp_RT);
 
 
 if abilitystate = 1 //If the player is in ice mode 
@@ -426,8 +409,8 @@ if abilitystate = 2 //If the player is in shield mode
 //Keyboard inputs
 input_right = keyboard_check(ord('D')) or keyboard_check(vk_right);
 input_left = keyboard_check(ord('A')) or keyboard_check(vk_left);
-input_jump = keyboard_check(ord('W')) or keyboard_check(vk_up) or gamepad_button_value(0,gp_A);
-input_jump_released = keyboard_check_released(ord('W')) or keyboard_check_released(vk_up) or gamepad_button_check_released(0,gp_A);
+input_jump = keyboard_check(ord('W')) or keyboard_check(vk_up) or gamepad_button_value(0,global.gp_A);
+input_jump_released = keyboard_check_released(ord('W')) or keyboard_check_released(vk_up) or gamepad_button_check_released(0,global.gp_A);
 
 gp_leftright = gamepad_axis_value(0,gp_axislh);
 
