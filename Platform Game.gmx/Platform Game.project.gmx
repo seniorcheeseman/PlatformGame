@@ -195,7 +195,7 @@
     <room>rooms\rm_gameplaydemo01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41889.0436428472</constant>
+    <constant name="GM_build_date">41889.078349838</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>

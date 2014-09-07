@@ -85,15 +85,15 @@ instance_activate_all();
             <string>
 input_up = keyboard_check_pressed(ord('W')) || keyboard_check_pressed(vk_up);
 input_down = keyboard_check_pressed(ord('S')) || keyboard_check_pressed(vk_down);
-input_enter = keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0,global.gp_A) || keyboard_check_pressed(vk_space);
-input_escape = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,global.gp_B);
+input_enter = keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0,gp_face1) || keyboard_check_pressed(vk_space);
+input_escape = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face2) || gamepad_button_check_pressed(0,gp_start);
 
 input_move = input_up - input_down;
 
 
 if gamepad_is_connected(0)
 {
-    input_move = gamepad_axis_value(0,gp_axislv);
+     input_move = gamepad_button_check_pressed(0,gp_padu) - gamepad_button_check_pressed(0,gp_padd);   
 }
 
 if input_move &gt; 0
@@ -138,6 +138,11 @@ if input_enter
     {  
         game_end();
     }
+}
+
+if input_escape
+{
+ instance_destroy();
 }
 </string>
           </argument>
