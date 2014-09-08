@@ -76,7 +76,7 @@ if dead
     
     if deathsoundplayed = false
     {
-        audio_play_sound(snd_enemydead1, 10, false);
+        audio_play_sound(snd_pinkfishdead, 10, false);
         deathsoundplayed = true;
         hsp *= 0.2;
         vsp = -5;

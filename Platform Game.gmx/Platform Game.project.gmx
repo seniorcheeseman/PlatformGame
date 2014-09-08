@@ -5,20 +5,29 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\snd_hitwall</sound>
-    <sound>sound\snd_jump</sound>
-    <sound>sound\snd_bounce</sound>
-    <sound>sound\snd_gameover</sound>
-    <sound>sound\snd_enemydead1</sound>
-    <sound>sound\snd_coingold</sound>
-    <sound>sound\snd_bump</sound>
-    <sound>sound\snd_overworld</sound>
-    <sound>sound\snd_checkpointreach</sound>
-    <sound>sound\snd_death</sound>
-    <sound>sound\snd_enemydead2</sound>
-    <sound>sound\snd_iceability</sound>
-    <sound>sound\snd_shieldability</sound>
-    <sound>sound\snd_transition</sound>
+    <sounds name="Music">
+      <sound>sound\snd_overworld</sound>
+      <sound>sound\snd_gameover</sound>
+    </sounds>
+    <sounds name="Player">
+      <sound>sound\snd_death</sound>
+      <sound>sound\snd_transition</sound>
+    </sounds>
+    <sounds name="Abilities">
+      <sound>sound\snd_iceability</sound>
+      <sound>sound\snd_shieldability</sound>
+      <sound>sound\snd_bounce</sound>
+      <sound>sound\snd_jump</sound>
+      <sound>sound\snd_hitwall</sound>
+    </sounds>
+    <sounds name="Level">
+      <sound>sound\snd_bouncerdead</sound>
+      <sound>sound\snd_checkpointreach</sound>
+      <sound>sound\snd_pinkfishdead</sound>
+      <sound>sound\snd_coingold</sound>
+      <sound>sound\snd_ghostdead</sound>
+      <sound>sound\snd_doorunlock</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="System">
@@ -160,6 +169,7 @@
         <object>objects\obj_boxcoin</object>
         <object>objects\obj_fadingblock</object>
         <object>objects\obj_goldkey</object>
+        <object>objects\obj_doorlocked</object>
       </objects>
       <objects name="Spikes">
         <object>objects\obj_spikeblockvd</object>
@@ -194,7 +204,7 @@
     <room>rooms\rm_level02</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41890.2344563194</constant>
+    <constant name="GM_build_date">41890.6317319444</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>

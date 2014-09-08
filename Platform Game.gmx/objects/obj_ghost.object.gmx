@@ -73,7 +73,7 @@ if dead
 {
     if deathsoundplayed = false
     {
-        audio_play_sound(snd_enemydead1, 10, false);
+        audio_play_sound(snd_ghostdead, 10, false);
         deathsoundplayed = true;
         vsp = -10;
     }

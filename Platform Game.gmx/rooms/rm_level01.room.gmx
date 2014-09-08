@@ -97,7 +97,7 @@
     <instance objName="obj_collision" x="700" y="560" name="inst_50E5EF87" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="770" y="560" name="inst_D3679D49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fadingblock" x="665" y="350" name="inst_A3AC5988" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boxcoin" x="1190" y="490" name="inst_582091BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_goldkey" x="140" y="840" name="inst_51669C67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_boxcoin" x="420" y="350" name="inst_AA03E19D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="1470" y="420" name="inst_0E498638" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plant" x="460" y="490" name="inst_8D0B8B96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -188,17 +188,17 @@
     <instance objName="obj_enemybounds" x="840" y="490" name="inst_73AEBE3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemybounds" x="910" y="840" name="inst_E421F620" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemybounds" x="420" y="840" name="inst_7DEE9C09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemybounds" x="1610" y="630" name="inst_4E46E948" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemybounds" x="1260" y="630" name="inst_E1471822" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pinkfish" x="1960" y="980" name="inst_F95EBE72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fadingblock" x="2625" y="420" name="inst_7A204B49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_next_level" x="3850" y="805" name="inst_C2D250DA" locked="0" code="//target_x = 2000;&#xA;//target_y = 350;&#xA;target_r = rm_level02;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_doorlocked" x="1295" y="490" name="inst_9C5A48F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinkfish" x="1820" y="840" name="inst_066C8C17" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemybounds" x="1610" y="840" name="inst_D2050483" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemybounds" x="1610" y="980" name="inst_42BDBA41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemybounds" x="2100" y="840" name="inst_EDBDADD7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemybounds" x="2100" y="980" name="inst_2038C56C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemybounds" x="1610" y="805" name="inst_D2050483" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fadingblock" x="0" y="665" name="inst_2849371A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemybounds" x="2100" y="805" name="inst_EDBDADD7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fadingblock" x="945" y="700" name="inst_EF11C0DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spikebounds" x="490" y="840" name="inst_A5E15364" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hspikedispenser" x="2555" y="665" name="inst_E2E1B716" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spikebounds" x="1610" y="630" name="inst_8B69D609" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_text" x="350" y="875" name="inst_F0696A60" locked="0" code="text = &quot;this is the text bro #man /#&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_goldcoin" x="2030" y="455" name="inst_341FCF65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_boxcoin" x="2310" y="490" name="inst_3447CB82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_goldcoin" x="1820" y="455" name="inst_BBBFB3BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -216,11 +216,11 @@
     <instance objName="obj_ghost" x="2835" y="945" name="inst_DD28DC7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemybounds" x="2590" y="910" name="inst_48AB6F8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemybounds" x="2940" y="910" name="inst_89E2DEEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_goldcoin" x="1820" y="910" name="inst_1222AC7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_goldcoin" x="1890" y="910" name="inst_1677D638" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_goldcoin" x="1960" y="910" name="inst_A21C8222" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_goldcoin" x="2030" y="910" name="inst_197ACC00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_goldcoin" x="1750" y="910" name="inst_B0A1CF31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_goldcoin" x="1820" y="945" name="inst_1222AC7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_goldcoin" x="1890" y="945" name="inst_1677D638" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_goldcoin" x="1960" y="945" name="inst_A21C8222" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_goldcoin" x="2030" y="945" name="inst_197ACC00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_goldcoin" x="1750" y="945" name="inst_B0A1CF31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="2170" y="560" name="inst_86990011" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="2520" y="385" name="inst_D4AB17F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="2590" y="385" name="inst_CD352A99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -235,15 +235,7 @@
     <instance objName="obj_collision" x="3850" y="875" name="inst_C4854605" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_icepickup" x="3080" y="910" name="inst_FECA7361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="3080" y="1050" name="inst_D28F3DE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bouncer" x="1470" y="630" name="inst_5488F155" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fadingblock" x="0" y="665" name="inst_2849371A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fadingblock" x="945" y="700" name="inst_EF11C0DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fadingblock" x="1470" y="385" name="inst_9C95F8BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fadingblock" x="2625" y="420" name="inst_7A204B49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_text" x="350" y="875" name="inst_F0696A60" locked="0" code="text = &quot;this is the text bro #man /#&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_next_level" x="3850" y="805" name="inst_C2D250DA" locked="0" code="//target_x = 2000;&#xA;//target_y = 350;&#xA;target_r = rm_level02;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_text" x="315" y="525" name="inst_4966A2DD" locked="0" code="text = &quot;bro&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_goldkey" x="140" y="840" name="inst_51669C67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tl_grass" x="0" y="910" w="70" h="70" xo="280" yo="210" id="10000313" name="inst_4606FD7E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

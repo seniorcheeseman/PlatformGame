@@ -90,7 +90,7 @@ background_music_delay -= 1;
 else
 {
     if !audio_is_playing(snd_overworld)
-    audio_play_sound(snd_overworld,10,true);
+    //audio_play_sound(snd_overworld,10,true);
     background_music_delay = -1;
 }
 
