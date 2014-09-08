@@ -9,7 +9,7 @@
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>69</bbox_right>
-  <bbox_top>35</bbox_top>
+  <bbox_top>0</bbox_top>
   <bbox_bottom>69</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -20,6 +20,6 @@
   <width>70</width>
   <height>70</height>
   <frames>
-    <frame index="0">images\spr_spike_0.png</frame>
+    <frame index="0">images\spr_fadingblock_0.png</frame>
   </frames>
 </sprite>

@@ -26,6 +26,20 @@
       <sprite>sprites\spr_water_collision</sprite>
       <sprite>sprites\spr_enemybounds</sprite>
       <sprite>sprites\spr_spikebounds</sprite>
+      <sprite>sprites\spr_text</sprite>
+      <sprite>sprites\spr_next_level</sprite>
+      <sprite>sprites\spr_redflaglimp</sprite>
+      <sprite>sprites\spr_redflagwaving</sprite>
+      <sprites name="Water">
+        <sprite>sprites\spr_underwater</sprite>
+        <sprite>sprites\spr_watersurface</sprite>
+      </sprites>
+      <sprites name="Menu">
+        <sprite>sprites\spr_pause_resume</sprite>
+        <sprite>sprites\spr_pause_option</sprite>
+        <sprite>sprites\spr_pause_exit</sprite>
+        <sprite>sprites\spr_pause_backdrop</sprite>
+      </sprites>
     </sprites>
     <sprites name="Player">
       <sprites name="Controller">
@@ -64,71 +78,42 @@
       <sprite>sprites\spr_bouncerdead</sprite>
       <sprite>sprites\spr_bouncer</sprite>
     </sprites>
-    <sprites name="Items Decorative">
-      <sprite>sprites\spr_cloud</sprite>
-      <sprite>sprites\spr_rock</sprite>
-      <sprite>sprites\spr_plantpurple</sprite>
-      <sprite>sprites\spr_plant</sprite>
-      <sprite>sprites\spr_bush</sprite>
-    </sprites>
-    <sprites name="Environment">
-      <sprites name="Boxes and Crates">
-        <sprite>sprites\spr_box</sprite>
-        <sprite>sprites\spr_boxalt</sprite>
-        <sprite>sprites\spr_boxcoin</sprite>
-        <sprite>sprites\spr_boxcoindisabled</sprite>
+    <sprites name="Levels">
+      <sprites name="Items">
+        <sprite>sprites\spr_goldcoin</sprite>
+        <sprite>sprites\spr_reciever</sprite>
+        <sprite>sprites\spr_teleporter</sprite>
         <sprite>sprites\spr_boxcoinalt</sprite>
         <sprite>sprites\spr_boxcoinaltdisabled</sprite>
-        <sprite>sprites\spr_boxempty</sprite>
         <sprite>sprites\spr_boxexplosive</sprite>
-        <sprite>sprites\spr_boxexplosivedisabled</sprite>
-        <sprite>sprites\spr_boxitem</sprite>
-        <sprite>sprites\spr_boxitemdisabled</sprite>
-        <sprite>sprites\spr_boxitemalt</sprite>
-        <sprite>sprites\spr_boxitemaltdisabled</sprite>
-        <sprite>sprites\spr_boxwall</sprite>
+        <sprite>sprites\spr_fadingblock</sprite>
       </sprites>
-      <sprites name="Water">
-        <sprite>sprites\spr_underwater</sprite>
-        <sprite>sprites\spr_watersurface</sprite>
+      <sprites name="Spikes">
+        <sprite>sprites\spr_spikeblockhl</sprite>
+        <sprite>sprites\spr_spikeblockhr</sprite>
+        <sprite>sprites\spr_spikeblockvu</sprite>
+        <sprite>sprites\spr_spikeblockvd</sprite>
+        <sprite>sprites\spr_vspikedispenser</sprite>
+        <sprite>sprites\spr_hspikedispenser</sprite>
+        <sprite>sprites\spr_vspikemoving</sprite>
+        <sprite>sprites\spr_spike</sprite>
+        <sprite>sprites\spr_hspikemoving</sprite>
+      </sprites>
+      <sprites name="Decorations">
+        <sprite>sprites\spr_cloud</sprite>
+        <sprite>sprites\spr_rock</sprite>
+        <sprite>sprites\spr_plantpurple</sprite>
+        <sprite>sprites\spr_plant</sprite>
+        <sprite>sprites\spr_bush</sprite>
       </sprites>
     </sprites>
     <sprites name="Abilities">
-      <sprite>sprites\spr_icepickup</sprite>
-      <sprite>sprites\spr_shieldpickup</sprite>
       <sprite>sprites\spr_iceability</sprite>
       <sprite>sprites\spr_shieldability</sprite>
+      <sprite>sprites\spr_shieldpickup</sprite>
+      <sprite>sprites\spr_icepickup</sprite>
       <sprite>sprites\spr_blockflashing</sprite>
       <sprite>sprites\spr_blockfrozen</sprite>
-    </sprites>
-    <sprites name="Items Interactive">
-      <sprite>sprites\spr_receiver</sprite>
-      <sprite>sprites\spr_teleporter</sprite>
-      <sprite>sprites\spr_switch</sprite>
-      <sprite>sprites\spr_spring</sprite>
-      <sprite>sprites\spr_redflaglimp</sprite>
-      <sprite>sprites\spr_redflagwaving</sprite>
-      <sprite>sprites\spr_goldcoin</sprite>
-      <sprite>sprites\spr_text</sprite>
-      <sprite>sprites\spr_next_level</sprite>
-      <sprite>sprites\spr_text2</sprite>
-    </sprites>
-    <sprites name="Spikes">
-      <sprite>sprites\spr_spikeblockhl</sprite>
-      <sprite>sprites\spr_spikeblockhr</sprite>
-      <sprite>sprites\spr_spikeblockvu</sprite>
-      <sprite>sprites\spr_spikeblockvd</sprite>
-      <sprite>sprites\spr_vspikedispenser</sprite>
-      <sprite>sprites\spr_hspikedispenser</sprite>
-      <sprite>sprites\spr_vspikemoving</sprite>
-      <sprite>sprites\spr_spike</sprite>
-      <sprite>sprites\spr_hspikemoving</sprite>
-    </sprites>
-    <sprites name="Menu">
-      <sprite>sprites\spr_pause_resume</sprite>
-      <sprite>sprites\spr_pause_option</sprite>
-      <sprite>sprites\spr_pause_exit</sprite>
-      <sprite>sprites\spr_pause_backdrop</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -144,6 +129,17 @@
     <font>fonts\font_text</font>
   </fonts>
   <objects name="objects">
+    <objects name="System">
+      <object>objects\obj_watersurface</object>
+      <object>objects\obj_underwater</object>
+      <object>objects\obj_collision</object>
+      <object>objects\obj_enemybounds</object>
+      <object>objects\obj_spikebounds</object>
+      <object>objects\obj_water</object>
+      <object>objects\obj_checkpoint</object>
+      <object>objects\obj_text</object>
+      <object>objects\obj_next_level</object>
+    </objects>
     <objects name="Player">
       <object>objects\obj_player</object>
       <object>objects\obj_controller</object>
@@ -154,46 +150,39 @@
       <object>objects\obj_ghost</object>
       <object>objects\obj_pinkfish</object>
     </objects>
-    <objects name="Items Decorative">
-      <object>objects\obj_tempgoldcoin</object>
-      <object>objects\obj_cloud</object>
-      <object>objects\obj_plant</object>
-      <object>objects\obj_bush</object>
-      <object>objects\obj_plantpurple</object>
-      <object>objects\obj_rock</object>
-    </objects>
-    <objects name="Items Interactive">
-      <object>objects\obj_goldcoin</object>
-      <object>objects\obj_receiver</object>
-      <object>objects\obj_boxcoin</object>
-      <object>objects\obj_spike</object>
-      <object>objects\obj_hspikedispenser</object>
-      <object>objects\obj_vspikedispenser</object>
-      <object>objects\obj_blockflashing</object>
-      <object>objects\obj_blockfrozen</object>
-      <object>objects\obj_checkpoint</object>
-      <object>objects\obj_teleporter</object>
-      <object>objects\obj_fallingblock</object>
-      <object>objects\obj_text</object>
-      <object>objects\obj_spikeblockhl</object>
-      <object>objects\obj_spikeblockhr</object>
-      <object>objects\obj_spikeblockvu</object>
-      <object>objects\obj_spikeblockvd</object>
-    </objects>
-    <objects name="System">
-      <object>objects\obj_collision</object>
-      <object>objects\obj_watersurface</object>
-      <object>objects\obj_underwater</object>
-      <object>objects\obj_enemybounds</object>
-      <object>objects\obj_spikebounds</object>
-      <object>objects\obj_water</object>
-      <object>objects\obj_next_level</object>
+    <objects name="Level">
+      <objects name="Items">
+        <object>objects\obj_goldcoin</object>
+        <object>objects\obj_teleporter</object>
+        <object>objects\obj_receiver</object>
+        <object>objects\obj_fadingblock</object>
+        <object>objects\obj_boxcoin</object>
+      </objects>
+      <objects name="Spikes">
+        <object>objects\obj_spikeblockvd</object>
+        <object>objects\obj_spikeblockvu</object>
+        <object>objects\obj_spikeblockhr</object>
+        <object>objects\obj_spikeblockhl</object>
+        <object>objects\obj_spike</object>
+        <object>objects\obj_hspikedispenser</object>
+        <object>objects\obj_vspikedispenser</object>
+      </objects>
+      <objects name="Decorations">
+        <object>objects\obj_tempgoldcoin</object>
+        <object>objects\obj_cloud</object>
+        <object>objects\obj_plant</object>
+        <object>objects\obj_bush</object>
+        <object>objects\obj_plantpurple</object>
+        <object>objects\obj_rock</object>
+      </objects>
     </objects>
     <objects name="Abilities">
       <object>objects\obj_iceability</object>
       <object>objects\obj_shieldability</object>
       <object>objects\obj_icepickup</object>
       <object>objects\obj_shieldpickup</object>
+      <object>objects\obj_blockflashing</object>
+      <object>objects\obj_blockfrozen</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>dir = 0;
 
-turnspeed = 60;
+turnspeed = 90;
 movespeed = 15;
 
 hsp = 0;
