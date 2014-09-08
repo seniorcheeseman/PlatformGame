@@ -1025,7 +1025,7 @@ if place_meeting(x,y+3,obj_player)
 
 if coins = 0 
 {
-    sprite_index = spr_boxcoindisabled;
+    sprite_index = spr_boxcoinaltdisabled;
 }
 
 if activated = true
@@ -1074,16 +1074,16 @@ if activated = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Collision with fallingblock
+            <string>///Collision with Fading Block
 
-collision_fallingblock = instance_place(x,y+1,obj_fallingblock)
+collision_fadingblock = instance_place(x,y+1,obj_fadingblock)
 
-if collision_fallingblock &amp;&amp; obj_controller.gameover = false
+if collision_fadingblock &amp;&amp; obj_controller.gameover = false
 {
- if collision_fallingblock.touched = false
+ if collision_fadingblock.touched = false
  {
-  collision_fallingblock.alarm[0] = collision_fallingblock.falldelay;
-  collision_fallingblock.touched = true;
+  collision_fadingblock.alarm[0] = collision_fadingblock.falldelay;
+  collision_fadingblock.touched = true;
  }
 }
 

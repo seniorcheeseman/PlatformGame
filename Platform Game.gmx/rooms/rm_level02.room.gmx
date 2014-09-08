@@ -103,10 +103,6 @@
     <instance objName="obj_collision" x="1470" y="1680" name="inst_2F415383" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="1330" y="1680" name="inst_15EEA462" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="140" y="1750" name="inst_644E9C44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spikeblockhl" x="70" y="980" name="inst_E689AC0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spikeblockhl" x="70" y="1050" name="inst_1B3AD9D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spikeblockhl" x="70" y="1120" name="inst_C35BF53B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spikeblockhl" x="70" y="1190" name="inst_D33D6F56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="700" y="980" name="inst_B45A7731" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="700" y="1190" name="inst_98C4FF38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="630" y="1260" name="inst_950E4099" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

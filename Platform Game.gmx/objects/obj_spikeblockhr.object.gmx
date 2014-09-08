@@ -25,9 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hsp = -obj_controller.spikeblockspeed;
+            <string>hsp = obj_controller.spikeblockspeed;
 movetime = obj_controller.spikeblockmovetime;
 staytime = obj_controller.spikeblockstaytime;
+
+stay = true;
+move = false;
 </string>
           </argument>
         </arguments>

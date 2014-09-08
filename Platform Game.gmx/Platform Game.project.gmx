@@ -87,6 +87,8 @@
         <sprite>sprites\spr_boxcoinaltdisabled</sprite>
         <sprite>sprites\spr_boxexplosive</sprite>
         <sprite>sprites\spr_fadingblock</sprite>
+        <sprite>sprites\spr_key</sprite>
+        <sprite>sprites\spr_doorlocked</sprite>
       </sprites>
       <sprites name="Spikes">
         <sprite>sprites\spr_spikeblockhl</sprite>
@@ -139,11 +141,11 @@
       <object>objects\obj_checkpoint</object>
       <object>objects\obj_text</object>
       <object>objects\obj_next_level</object>
+      <object>objects\obj_pause_menu_controller</object>
     </objects>
     <objects name="Player">
       <object>objects\obj_player</object>
       <object>objects\obj_controller</object>
-      <object>objects\obj_pause_menu_controller</object>
     </objects>
     <objects name="Enemies">
       <object>objects\obj_bouncer</object>
@@ -155,14 +157,15 @@
         <object>objects\obj_goldcoin</object>
         <object>objects\obj_teleporter</object>
         <object>objects\obj_receiver</object>
-        <object>objects\obj_fadingblock</object>
         <object>objects\obj_boxcoin</object>
+        <object>objects\obj_fadingblock</object>
+        <object>objects\obj_goldkey</object>
       </objects>
       <objects name="Spikes">
         <object>objects\obj_spikeblockvd</object>
         <object>objects\obj_spikeblockvu</object>
-        <object>objects\obj_spikeblockhr</object>
         <object>objects\obj_spikeblockhl</object>
+        <object>objects\obj_spikeblockhr</object>
         <object>objects\obj_spike</object>
         <object>objects\obj_hspikedispenser</object>
         <object>objects\obj_vspikedispenser</object>
@@ -191,7 +194,7 @@
     <room>rooms\rm_level02</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41890.0489974537</constant>
+    <constant name="GM_build_date">41890.2344563194</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
