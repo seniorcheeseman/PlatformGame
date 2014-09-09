@@ -116,6 +116,12 @@
         <sprite>sprites\spr_plantpurple</sprite>
         <sprite>sprites\spr_plant</sprite>
         <sprite>sprites\spr_bush</sprite>
+        <sprite>sprites\spr_hill</sprite>
+        <sprite>sprites\spr_hillsmall</sprite>
+        <sprite>sprites\spr_brickwall</sprite>
+        <sprite>sprites\spr_boxwarning</sprite>
+        <sprite>sprites\spr_fence</sprite>
+        <sprite>sprites\spr_fencebroken</sprite>
       </sprites>
     </sprites>
     <sprites name="Abilities">
@@ -187,6 +193,12 @@
         <object>objects\obj_bush</object>
         <object>objects\obj_plantpurple</object>
         <object>objects\obj_rock</object>
+        <object>objects\obj_hill</object>
+        <object>objects\obj_hillsmall</object>
+        <object>objects\obj_brickwall</object>
+        <object>objects\obj_boxwarning</object>
+        <object>objects\obj_fence</object>
+        <object>objects\obj_fencebroken</object>
       </objects>
     </objects>
     <objects name="Abilities">
@@ -204,7 +216,7 @@
     <room>rooms\rm_level02</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41891.2243042361</constant>
+    <constant name="GM_build_date">41891.6850834606</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>

@@ -4,7 +4,7 @@
   <width>4200</width>
   <height>1120</height>
   <vsnap>35</vsnap>
-  <hsnap>35</hsnap>
+  <hsnap>30</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -264,6 +264,17 @@
     <instance objName="obj_rock" x="1575" y="630" name="inst_1B7C19BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plant" x="2835" y="910" name="inst_DCBB5B30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="3850" y="700" name="inst_353CCB18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fence" x="240" y="840" name="inst_081FA046" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fence" x="300" y="840" name="inst_086BDF0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fence" x="180" y="840" name="inst_2401E80B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fence" x="120" y="840" name="inst_DDC237AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fence" x="0" y="840" name="inst_418ABF63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fence" x="60" y="840" name="inst_32DD1DAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fence" x="2100" y="630" name="inst_CF894A97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fence" x="2160" y="630" name="inst_35A2B495" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fence" x="2220" y="630" name="inst_3E0E669D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fence" x="2280" y="630" name="inst_CBFBF58B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fencebroken" x="2340" y="630" name="inst_662B51EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tl_grass" x="0" y="910" w="70" h="70" xo="280" yo="210" id="10000313" name="inst_4606FD7E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
