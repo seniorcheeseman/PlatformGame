@@ -84,34 +84,42 @@ if obj_controller.gameover = false
 {
 image_angle += turnspeed;
 
-if gravity = 0
-{
-    input_right = keyboard_check(ord('D')) or keyboard_check(vk_right);
-    input_left = keyboard_check(ord('A')) or keyboard_check(vk_left);
-    input_up = keyboard_check(ord('W')) or keyboard_check(vk_up);
-    input_down = keyboard_check(ord('S')) or keyboard_check(vk_down);
-    
-    hsp = movespeed*(-input_left+input_right);
-    vsp = movespeed*(-input_up+input_down); 
-    
-    if gamepad_is_connected(0)
+    if gravity = 0
     {
-        hsp = movespeed*gamepad_axis_value(0,gp_axislh);
-        vsp = movespeed*gamepad_axis_value(0,gp_axislv);
-    }
     
-    gamepad_set_vibration(0,0.3,0.3);
-}
-else
-{
- obj_player.canmove = true;
- gamepad_set_vibration(0,0,0);
-}
+        obj_player.canmove = false;
+        
+        input_right = keyboard_check(ord('D')) or keyboard_check(vk_right);
+        input_left = keyboard_check(ord('A')) or keyboard_check(vk_left);
+        input_up = keyboard_check(ord('W')) or keyboard_check(vk_up);
+        input_down = keyboard_check(ord('S')) or keyboard_check(vk_down);
+        
+        hsp = movespeed*(-input_left+input_right);
+        vsp = movespeed*(-input_up+input_down); 
+        
+        if gamepad_is_connected(0)
+        {
+            hsp = movespeed*gamepad_axis_value(0,gp_axislh);
+            vsp = movespeed*gamepad_axis_value(0,gp_axislv);
+        }
+        
+        gamepad_set_vibration(0,0.3,0.3);
+        
+    }
+    else
+    {
+     obj_player.canmove = true;
+     gamepad_set_vibration(0,0,0);
+    }
 
 x += hsp;
 y += vsp;
 
 dir += 5;
+}
+else
+{
+ image_speed = 0;
 }
 </string>
           </argument>

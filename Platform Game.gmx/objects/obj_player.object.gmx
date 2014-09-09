@@ -354,19 +354,11 @@ if abilitystate = 1 //If the player is in ice mode
         
         if !audio_is_playing(snd_iceability)
         audio_play_sound(snd_iceability, 10, false);
-        
-        canmove = false;
-    }
-    
-    if input_ability
-    {
-        //canmove = false;
     }
     
     if input_ability_released
     {
         obj_iceability.gravity = 1;
-        canmove = true;
     }
 }
 
