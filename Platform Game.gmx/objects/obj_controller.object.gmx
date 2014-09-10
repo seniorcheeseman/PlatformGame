@@ -31,9 +31,6 @@ gameover = false;
 
 score = 0;
 
-
-
-
 checkpoint_x = x;
 checkpoint_y = y;
 background_music_delay = 5;
