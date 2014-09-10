@@ -78,6 +78,11 @@
         <sprite>sprites\spr_shieldplayerswimming</sprite>
         <sprite>sprites\spr_shieldplayerfalling</sprite>
       </sprites>
+      <sprites name="Transition">
+        <sprite>sprites\spr_normaltoice</sprite>
+        <sprite>sprites\spr_normaltoshield</sprite>
+        <sprite>sprites\spr_icetoshield</sprite>
+      </sprites>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_ghost</sprite>
@@ -216,7 +221,7 @@
     <room>rooms\rm_level02</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41892.0707206366</constant>
+    <constant name="GM_build_date">41892.2377213889</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>

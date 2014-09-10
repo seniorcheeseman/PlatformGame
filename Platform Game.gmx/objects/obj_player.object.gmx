@@ -36,8 +36,12 @@ instance_create(x,y,obj_controller);
 //               0 for normal
 //               1 for ice
 //               2 for shield
-  
+
+invincible = false;
+
 abilitystate = 0;
+previousstate = 0;
+transition = false;
 transitiontime = 60;
 canshield = true;
 useshielddelay = 60;
@@ -157,7 +161,8 @@ canshield = true;
             <kind>1</kind>
             <string>///Set canmove to true
 canmove = true;
-
+transition = false;
+previousstate = abilitystate;
 </string>
           </argument>
         </arguments>
@@ -343,7 +348,6 @@ input_ability_pressed = keyboard_check_pressed(vk_space) || gamepad_button_check
 input_ability = keyboard_check(vk_space) || gamepad_button_check(0,global.gp_RT);
 input_ability_released = keyboard_check_released(vk_space) || gamepad_button_check_released(0,global.gp_RT);
 
-
 if abilitystate = 1 //If the player is in ice mode 
 {
     if input_ability_pressed
@@ -405,6 +409,8 @@ input_left = keyboard_check(ord('A')) or keyboard_check(vk_left);
 input_jump = keyboard_check(ord('W')) or keyboard_check(vk_up) or gamepad_button_value(0,global.gp_A);
 input_jump_released = keyboard_check_released(ord('W')) or keyboard_check_released(vk_up) or gamepad_button_check_released(0,global.gp_A);
 
+input_invincible_pressed = keyboard_check_pressed(ord('K')) or gamepad_button_check_pressed(0,global.gp_DU);
+
 gp_leftright = gamepad_axis_value(0,gp_axislh);
 
 //React to inputs
@@ -434,7 +440,10 @@ if input_jump
     }
 }
 
-
+if input_invincible_pressed
+{
+ invincible = !invincible;
+}
 </string>
           </argument>
         </arguments>
@@ -489,67 +498,100 @@ if jumping = true
 if hsp != 0
 image_xscale = sign(hsp); 
 
-if abilitystate = 0
+if transition = false
 {
-    if onground
+    if abilitystate = 0
     {
-        if hsp != 0
-        sprite_index = spr_playerrunning;  
+        if onground
+        {
+            if hsp != 0
+            sprite_index = spr_playerrunning;  
+            else
+            if !input_jump
+            sprite_index = spr_player;
+        } 
+        else if underwater or atwatersurface
+        {
+            if hsp != 0
+            sprite_index = spr_playerswimming;
+            else
+            sprite_index = spr_player;
+        }
         else
-        if !input_jump
-        sprite_index = spr_player;
-    } 
-    else if underwater or atwatersurface
-    {
-        if hsp != 0
-        sprite_index = spr_playerswimming;
-        else
-        sprite_index = spr_player;
+        sprite_index = spr_playerjumping;
     }
-    else
-    sprite_index = spr_playerjumping;
+    
+    if abilitystate = 1
+    {
+        if onground
+        {
+            if hsp != 0
+            sprite_index = spr_iceplayerrunning;  
+            else
+            if !input_jump
+            sprite_index = spr_iceplayer;
+        } 
+        else if underwater or atwatersurface
+        {
+            if hsp != 0
+            sprite_index = spr_iceplayerswimming;
+            else
+            sprite_index = spr_iceplayer;
+        }
+        else
+        sprite_index = spr_iceplayerjumping;
+    }
+    
+    if abilitystate = 2
+    {
+        if onground
+        {
+            if hsp != 0
+            sprite_index = spr_shieldplayerrunning;  
+            else
+            if !input_jump
+            sprite_index = spr_shieldplayer;
+        } 
+        else if underwater or atwatersurface
+        {
+            if hsp != 0
+            sprite_index = spr_shieldplayerswimming;
+            else
+            sprite_index = spr_shieldplayer;
+            
+        }
+        else
+        sprite_index = spr_shieldplayerjumping;
+    }
 }
-
-if abilitystate = 1
+else
 {
-    if onground
-    {
-        if hsp != 0
-        sprite_index = spr_iceplayerrunning;  
-        else
-        if !input_jump
-        sprite_index = spr_iceplayer;
-    } 
-    else if underwater or atwatersurface
-    {
-        if hsp != 0
-        sprite_index = spr_iceplayerswimming;
-        else
-        sprite_index = spr_iceplayer;
-    }
-    else
-    sprite_index = spr_iceplayerjumping;
-}
-
-if abilitystate = 2
-{
-    if onground
-    {
-        if hsp != 0
-        sprite_index = spr_shieldplayerrunning;  
-        else
-        if !input_jump
-        sprite_index = spr_shieldplayer;
-    } 
-    else if underwater or atwatersurface
-    {
-        if hsp != 0
-        sprite_index = spr_shieldplayerswimming;
-        else
-        sprite_index = spr_shieldplayer;
-    }
-    else
-    sprite_index = spr_shieldplayerjumping;
+ image_speed = 0.08;
+ 
+ if abilitystate = 1
+ {
+  if previousstate = 0
+  {
+   sprite_index = spr_normaltoice;
+  }
+  if previousstate = 2
+  {
+   sprite_index = spr_icetoshield;
+   image_speed = -0.08;
+  }
+ }
+ 
+  if abilitystate = 2
+ {
+  if previousstate = 0
+  {
+   sprite_index = spr_normaltoshield;
+  }
+  if previousstate = 1
+  {
+   sprite_index = spr_icetoshield;
+  }
+ }
 }
 </string>
           </argument>
@@ -584,6 +626,7 @@ gamepad_set_vibration(0,0,0);
 if !atwatersurface &amp;&amp; !underwater
 {
     //Set the animation speed
+    if transition = false
     image_speed = 0.2*move/1;
     
     //Set the hsp and vsp on land and in the air
@@ -598,7 +641,9 @@ if !atwatersurface &amp;&amp; !underwater
 
 else //If the player is in the water
 {
+    
     //Set the animation speed
+    if transition = false
     image_speed = 0.1*move/1;
     
     //Set the hsp and vsp in water
@@ -618,25 +663,6 @@ if (x + hsp) &lt; 20 || (x + hsp) &gt; (room_width - 20)
 {
     hsp = 0;
 }
-
-//if instance_place(x,y+hsp,obj_fallingblock)
-//{
-//    while(!place_meeting(x+sign(hsp),y,obj_fallingblock))
-//    {
-//        x += sign(hsp);  
-//    }
-//    hsp = 0;  
-//}
-
-//v_col = instance_place(x,y+vsp,obj_fallingblock)
-//if v_col
-//{
-//    while(!place_meeting(x,y+sign(vsp),v_col))
-//    {
-//        y += sign(vsp);  
-//    }
-//    vsp = v_col.vspeed;
-//}
 
 //Horizontal Collision Calculations
 if place_meeting(x+hsp,y,obj_collision)
@@ -709,9 +735,11 @@ collision_icepickup = instance_place(x,y,obj_icepickup);
 if collision_icepickup &amp;&amp; obj_controller.gameover = false
 {
     with(collision_icepickup) instance_destroy();
+    previousstate = abilitystate;
     abilitystate = 1;
     
     canmove = 0;
+    transition = true;
     alarm[0] = transitiontime;
     audio_play_sound(snd_transition,10,false);
     
@@ -745,9 +773,11 @@ collision_shieldpickup = instance_place(x,y,obj_shieldpickup);
 if collision_shieldpickup &amp;&amp; obj_controller.gameover = false
 {
     with(collision_shieldpickup) instance_destroy();
+    previousstate = abilitystate;
     abilitystate = 2;
     
     canmove = 0;
+    transition = true;
     alarm[0] = transitiontime;
     audio_play_sound(snd_transition,10,false);
     
