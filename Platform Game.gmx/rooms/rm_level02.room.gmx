@@ -152,6 +152,11 @@
     <instance objName="obj_vspikedispenser" x="1155" y="1925" name="inst_6348860A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="1190" y="1680" name="inst_57A5DD5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="1260" y="1680" name="inst_9BA6EAC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blockflashing" x="210" y="1680" name="inst_E4065B5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blockflashing" x="350" y="1470" name="inst_F5B80845" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blockflashing" x="210" y="1260" name="inst_020EDEAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blockflashing" x="2870" y="980" name="inst_109E0E34" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_shieldpickup" x="70" y="1890" name="inst_B2910287" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tl_castle" x="770" y="980" w="70" h="70" xo="280" yo="210" id="10000714" name="inst_FF5B59FF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
