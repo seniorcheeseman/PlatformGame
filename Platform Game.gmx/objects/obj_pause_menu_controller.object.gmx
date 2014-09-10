@@ -29,7 +29,7 @@
 
 instance_deactivate_all(true);
 
-background = sprite_add("tempscreenshot.png", 0, false, true, 1600, 1200);
+background = sprite_add("tempscreenshot.png", 0, false, true, 0, 0);
 
 interest = "resume";
 </string>
@@ -194,8 +194,8 @@ instance_activate_all();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string> draw_sprite(background, 0, 1600, 1200);
- draw_sprite(spr_pause_backdrop, 0, 1600, 1200);
+            <string> draw_sprite(background, 0, 0, 0);
+ draw_sprite(spr_pause_backdrop, 0, 0, 0);
 
 if (interest == "resume") 
 {
