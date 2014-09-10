@@ -225,7 +225,11 @@
     <room>rooms\rm_level02</room>
   </rooms>
   <constants number="2">
+<<<<<<< HEAD
     <constant name="GM_build_date">41892.8519785995</constant>
+=======
+    <constant name="GM_build_date">41892.8366497685</constant>
+>>>>>>> origin/master
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
