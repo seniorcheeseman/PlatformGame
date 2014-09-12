@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_collision</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,12 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hsp = obj_controller.spikeblockspeed;
-movetime = obj_controller.spikeblockmovetime;
+            <string>hsp = -obj_controller.spikeblockspeed;
+movetime = 0;
 staytime = obj_controller.spikeblockstaytime;
 
 stay = true;
-move = false;
+movein = false;
+moveout = false;
 </string>
           </argument>
         </arguments>
@@ -66,23 +67,33 @@ else
 {
  stay = false;
  staytime = obj_controller.spikeblockstaytime;
- move = true;
+ movein = true;
 }
 
-if move = true
-if movetime &gt; 0
+if place_meeting(x,y,obj_spikeblockbounds)
 {
- if movetime &gt; 0.5*obj_controller.spikeblockmovetime
- x += hsp;
- else
- x -= hsp;
- movetime --;
+  movein = false;
+  moveout = true;
 }
-else
+
+if movein = true
 {
- move = false;
- movetime = obj_controller.spikeblockmovetime;
- stay = true;
+ x += hsp;
+ movetime ++;
+}
+
+if moveout = true
+{
+ if movetime &gt; 0
+ {
+  x -= hsp;
+  movetime --;
+ }
+ else
+ {
+  moveout = false;
+  stay = true;
+ }
 }
 
 </string>

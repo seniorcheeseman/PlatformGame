@@ -61,7 +61,7 @@ atwatersurface = false;
 grav = 1;
 hsp = 0;
 vsp = 0;
-jumpspeed = 27;
+jumpspeed = 25;
 movespeed = 8;
 bouncespeed = 15;
 

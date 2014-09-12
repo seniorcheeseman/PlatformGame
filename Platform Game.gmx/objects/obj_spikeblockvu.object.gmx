@@ -26,8 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>vsp = -obj_controller.spikeblockspeed;
-movetime = obj_controller.spikeblockmovetime;
+movetime = 0;
 staytime = obj_controller.spikeblockstaytime;
+
+stay = true;
+movein = false;
+moveout = false;
 </string>
           </argument>
         </arguments>
