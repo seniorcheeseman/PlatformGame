@@ -39,6 +39,8 @@ instance_create(x,y,obj_controller);
 
 invincible = false;
 
+key_down = 0;// for platform 
+
 abilitystate = 0;
 previousstate = 0;
 transition = false;
@@ -1250,7 +1252,17 @@ if collision_spikeblockvd &amp;&amp; obj_controller.gameover = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>///Check for platform
+
+key_jump = keyboard_check_pressed(vk_space);
+key_down = keyboard_check(vk_down);
+
+if (place_meeting(x, y+1, obj_movplatform))
+{
+    if (key_jump) vsp = -jumpspeed; 
+
+}
+</string>
           </argument>
         </arguments>
       </action>

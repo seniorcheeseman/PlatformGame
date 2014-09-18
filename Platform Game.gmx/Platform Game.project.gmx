@@ -104,6 +104,7 @@
         <sprite>sprites\spr_fadingblock</sprite>
         <sprite>sprites\spr_key</sprite>
         <sprite>sprites\spr_doorlocked</sprite>
+        <sprite>sprites\spr_moveplatform</sprite>
       </sprites>
       <sprites name="Spikes">
         <sprite>sprites\spr_spikeblockhl</sprite>
@@ -138,6 +139,7 @@
       <sprite>sprites\spr_blockflashing</sprite>
       <sprite>sprites\spr_blockfrozen</sprite>
     </sprites>
+    <sprite>sprites\sprite80</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sky</background>
@@ -183,6 +185,7 @@
         <object>objects\obj_fadingblock</object>
         <object>objects\obj_goldkey</object>
         <object>objects\obj_doorlocked</object>
+        <object>objects\obj_movplatform</object>
       </objects>
       <objects name="Spikes">
         <object>objects\obj_spikeblockvd</object>
@@ -222,7 +225,7 @@
     <room>rooms\rm_level01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41894.9807427778</constant>
+    <constant name="GM_build_date">41900.0525971759</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
