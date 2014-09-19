@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1600" hview="1200" xport="0" yport="0" wport="800" hport="600" hborder="800" vborder="1000" hspeed="10000" vspeed="10000"/>
+    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1800" hview="1350" xport="0" yport="0" wport="1800" hport="1350" hborder="900" vborder="675" hspeed="10000" vspeed="10000"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -64,10 +64,10 @@
     <instance objName="obj_enemybounds" x="1260" y="2800" name="inst_4E257719" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemybounds" x="210" y="2800" name="inst_FDA2A783" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_boxcoin" x="0" y="2590" name="inst_950FD8F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boxcoin" x="1330" y="2170" name="inst_9343DBFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boxcoin" x="490" y="2170" name="inst_B5A11330" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boxcoin" x="770" y="2170" name="inst_098D8AD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boxcoin" x="1050" y="2170" name="inst_E04AB6D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boxcoin" x="1330" y="2135" name="inst_9343DBFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boxcoin" x="490" y="2135" name="inst_B5A11330" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boxcoin" x="770" y="2135" name="inst_098D8AD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boxcoin" x="1050" y="2135" name="inst_E04AB6D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spikeblockvd" x="350" y="1925" name="inst_09628AD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spikeblockvd" x="630" y="1925" name="inst_0637545E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spikeblockvd" x="910" y="1925" name="inst_BB4C656A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -77,8 +77,9 @@
     <instance objName="obj_spikeblockbounds" x="630" y="2380" name="inst_37EC7CC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spikeblockbounds" x="910" y="2380" name="inst_E7F0AC2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spikeblockbounds" x="1190" y="2380" name="inst_B66FD00D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision" x="0" y="1575" name="inst_9F729AFD" locked="0" code="" scaleX="48.6956520080566" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="0" y="1610" name="inst_9F729AFD" locked="0" code="" scaleX="48.6956520080566" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="0" y="1925" name="inst_E1C53F66" locked="0" code="" scaleX="3" scaleY="1.01449275016785" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spikeblockhr" x="0" y="2380" name="inst_2F91FDAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

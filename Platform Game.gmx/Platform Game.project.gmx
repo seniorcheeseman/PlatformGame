@@ -219,10 +219,10 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
-    <room>rooms\rm_level01</room>
+    <room>rooms\rm_level02</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41894.9807427778</constant>
+    <constant name="GM_build_date">41901.9611009259</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
