@@ -170,7 +170,6 @@
       <object>objects\obj_next_level</object>
       <object>objects\obj_pause_menu_controller</object>
       <object>objects\obj_platformbound</object>
-      <object>objects\object54</object>
     </objects>
     <objects name="Player">
       <object>objects\obj_player</object>
@@ -192,8 +191,6 @@
         <object>objects\obj_doorlocked</object>
         <object>objects\obj_platform</object>
         <object>objects\obj_horplatform</object>
-        <object>objects\obj_verplatform</object>
-        <object>objects\object52</object>
       </objects>
       <objects name="Spikes">
         <object>objects\obj_spikeblockvd</object>
@@ -227,14 +224,13 @@
       <object>objects\obj_blockflashing</object>
       <object>objects\obj_blockfrozen</object>
     </objects>
-    <object>objects\object50</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
     <room>rooms\rm_level01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41901.0032896296</constant>
+    <constant name="GM_build_date">41901.9844195139</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>

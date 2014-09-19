@@ -175,107 +175,6 @@ previousstate = abilitystate;
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Collision with horplatform
-//hsp_carry = 0;
-var hsp_final = hsp + hsp_carry;
-hsp_carry = 0;
-
-//Horizontal Collision
-if (place_meeting(x+hsp_final, y, obj_collision))
-{
-    while (!place_meeting(x+sign(hsp_final),y,obj_collision))
-    {
-       x += sign(hsp_final);
-    }  
-    hsp_final = 0;
-    hsp = 0;
-}
-
-x += hsp_final;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Collision with verplatform
-var vsp_final = vsp + vsp_carry;
-vsp_carry = 0;
-
-//Vertical Collision
-if (place_meeting(x, y+vsp_final, obj_verplatform))
-{
-    while (!place_meeting(x, y+sign(vsp_final),obj_verplatform))
-    {
-       y += sign(vsp_final);
-    }  
-    vsp_final = 0;
-    vsp = 0;
-}
-
-y += vsp_final;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///check for platform
-
-key_down = keyboard_check(vk_down);
-
-if (place_meeting(x, y+1, obj_platform))
-{
-   if (input_jump) vsp = -jumpspeed;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>605</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -1299,6 +1198,34 @@ if collision_spikeblockhr &amp;&amp; obj_controller.gameover = false
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Collision with spikeblockvd
+
+collision_spikeblockvd = instance_place(x,y,obj_spikeblockvd)
+
+if collision_spikeblockvd &amp;&amp; obj_controller.gameover = false
+{
+    obj_controller.gameover = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Collision with spikeblockvu
 
 collision_spikeblockvu = instance_place(x,y,obj_spikeblockvu)
@@ -1327,13 +1254,74 @@ if collision_spikeblockvu &amp;&amp; obj_controller.gameover = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Collision with spikeblockvd
+            <string>///Collision with horplatform
 
-collision_spikeblockvd = instance_place(x,y,obj_spikeblockvd)
 
-if collision_spikeblockvd &amp;&amp; obj_controller.gameover = false
+var hsp_final = hsp + hsp_carry;
+//var vsp_final = vsp + vsp_carry;
+hsp_carry = 0;
+//vsp_carry = 0;
+
+//Vertical Collision
+if (place_meeting(x+hsp_final, y, obj_platform))
 {
-    obj_controller.gameover = true;
+    while (!place_meeting(x+ sign(hsp_final), y, obj_platform))
+    {
+       x += sign(hsp_final);
+       //y += sign(vsp_final);
+    }  
+    hsp_final = 0;
+    //vsp_final = 0;
+    hsp = 0;
+    //vsp = 0;
+    }
+
+x += hsp_final;
+//y += vsp_final;
+/*//hsp_carry = 0;
+var hsp_final = hsp + hsp_carry;
+hsp_carry = 0;
+
+//Horizontal Collision
+if (place_meeting(x+hsp_final, y, obj_horplatform))
+{
+    while (!place_meeting(x+sign(hsp_final),y,obj_horplatform))
+    {
+       x += sign(hsp_final);
+    }  
+    hsp_final = 0;
+    hsp = 0;
+    //+sign(vsp_final
+}
+
+x += hsp_final;*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check for platform
+
+key_down = keyboard_check(vk_down);
+
+if (place_meeting(x, y+1, obj_platform))
+{
+   if (input_jump) vsp = -jumpspeed;
 }
 </string>
           </argument>
