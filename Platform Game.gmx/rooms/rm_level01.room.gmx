@@ -79,9 +79,12 @@
     <instance objName="obj_spikeblockbounds" x="1190" y="2380" name="inst_B66FD00D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="0" y="1575" name="inst_9F729AFD" locked="0" code="" scaleX="48.6956520080566" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="0" y="1925" name="inst_E1C53F66" locked="0" code="" scaleX="3" scaleY="1.01449275016785" colour="4294967295" rotation="0"/>
-    <instance objName="obj_movplatform" x="1505" y="2975" name="inst_60BC5A58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_movplatform" x="1330" y="2940" name="inst_4A750FB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_movplatform" x="1330" y="2975" name="inst_514BFE48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_horplatform" x="1050" y="2625" name="inst_2ADD7DC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_verplatform" x="1085" y="3150" name="inst_C74C5F9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platformbound" x="1050" y="3010" name="inst_F0F0198C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platformbound" x="420" y="2625" name="inst_CA86E664" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platformbound" x="1085" y="3325" name="inst_DA7361AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platformbound" x="1400" y="2625" name="inst_41AF5072" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -38,6 +38,7 @@
       <sprite>sprites\spr_spikebounds</sprite>
       <sprite>sprites\spr_text</sprite>
       <sprite>sprites\spr_next_level</sprite>
+      <sprite>sprites\spr_platformbounds</sprite>
       <sprite>sprites\spr_redflaglimp</sprite>
       <sprite>sprites\spr_redflagwaving</sprite>
       <sprites name="Water">
@@ -104,7 +105,9 @@
         <sprite>sprites\spr_fadingblock</sprite>
         <sprite>sprites\spr_key</sprite>
         <sprite>sprites\spr_doorlocked</sprite>
-        <sprite>sprites\spr_moveplatform</sprite>
+        <sprite>sprites\spr_platform</sprite>
+        <sprite>sprites\spr_horplatform</sprite>
+        <sprite>sprites\spr_verplatform</sprite>
       </sprites>
       <sprites name="Spikes">
         <sprite>sprites\spr_spikeblockhl</sprite>
@@ -166,6 +169,8 @@
       <object>objects\obj_text</object>
       <object>objects\obj_next_level</object>
       <object>objects\obj_pause_menu_controller</object>
+      <object>objects\obj_platformbound</object>
+      <object>objects\object54</object>
     </objects>
     <objects name="Player">
       <object>objects\obj_player</object>
@@ -185,7 +190,10 @@
         <object>objects\obj_fadingblock</object>
         <object>objects\obj_goldkey</object>
         <object>objects\obj_doorlocked</object>
-        <object>objects\obj_movplatform</object>
+        <object>objects\obj_platform</object>
+        <object>objects\obj_horplatform</object>
+        <object>objects\obj_verplatform</object>
+        <object>objects\object52</object>
       </objects>
       <objects name="Spikes">
         <object>objects\obj_spikeblockvd</object>
@@ -219,13 +227,14 @@
       <object>objects\obj_blockflashing</object>
       <object>objects\obj_blockfrozen</object>
     </objects>
+    <object>objects\object50</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
     <room>rooms\rm_level01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41900.0525971759</constant>
+    <constant name="GM_build_date">41901.0032896296</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
