@@ -227,7 +227,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
-    <room>rooms\rm_level01</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">41901.9844195139</constant>
