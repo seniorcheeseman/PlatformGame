@@ -140,11 +140,13 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_sky</background>
-    <background>background\tl_grass</background>
-    <background>background\bg_scifi</background>
-    <background>background\bg_castle</background>
-    <background>background\tl_castle</background>
+    <backgrounds name="Backgrounds">
+      <background>background\bg_sky</background>
+      <background>background\bg_coloredgrass</background>
+    </backgrounds>
+    <backgrounds name="Tiles">
+      <background>background\tl_grass</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
@@ -183,6 +185,8 @@
         <object>objects\obj_fadingblock</object>
         <object>objects\obj_goldkey</object>
         <object>objects\obj_doorlocked</object>
+        <object>objects\obj_goldkey2</object>
+        <object>objects\pbj_doorlocked2</object>
       </objects>
       <objects name="Spikes">
         <object>objects\obj_spikeblockvd</object>
@@ -222,7 +226,7 @@
     <room>rooms\rm_level01</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41894.9807427778</constant>
+    <constant name="GM_build_date">41901.9796951852</constant>
     <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
